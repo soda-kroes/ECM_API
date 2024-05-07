@@ -1,0 +1,39 @@
+
+const express = require("express") //import
+const app = express() //extend
+
+app.use(express.json()) //use for get body json in postman
+
+app.get("/",()=>{
+    console.log("Hello Node Api");
+})
+
+app.get("/api/product",()=>{
+    console.log("Your request api/product")
+})
+
+//req query
+app.get("/api/user",(req,res)=>{
+    res.json({
+        data: req.query
+    })
+})
+
+//req param
+app.get("/api/product/:id",(req,res)=>{
+    res.json({
+        data: req.params
+    })
+})
+
+//req body
+app.get("/api/category",(req,res)=>{
+    res.json({
+        data: req.body
+    })
+})
+
+
+app.listen(8081,()=>{
+    console.log("Your port: 8081");
+})

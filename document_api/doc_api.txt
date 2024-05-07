@@ -1,0 +1,64 @@
++ API DOCUMENT: 
+============================================
+server = http://localhost:8080/api
+#Category
+    -getAll
+        -url: server+Category
+        -method: get
+    -getOne
+        -url: server+Category/:id
+        -method: get
+    -create
+        -url: server+Category
+        -method: post   
+        -param json
+            {
+                "name": "", -> requried
+                "description": "",
+                "parent_id": "",
+                "status": ""
+
+            }
+    -update
+        -url: server+Category
+        -method: put   
+        -param json
+            {
+                "category_id": "" -> requried 
+                "name": "", -> requried
+                "description": "",
+                "parent_id": "",
+                "status": ""
+
+            }
+    -delete
+        -url: server+category/:id
+        -method: delete
+
+------------------------------------------------------------------------------------------------------
+    #Employee
+    -getAll
+        -url: server+employee
+        -method: get
+    -getOne
+        -url: server+employee/:id
+        -method: get
+    -create
+        -url: server+employee
+        -method: post   
+        -param json
+            {
+                ...
+
+            }
+    -update
+        -url: server+employee
+        -method: put   
+        -param json
+            {
+                .....
+
+            }
+    -delete
+        -url: server+employee/:id
+        -method: delete
